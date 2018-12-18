@@ -37,7 +37,7 @@ public class ORMConfig {
 
     static {
         //得到的classpath路径
-        classpath = Thread.currentThread().getContextClassLoader().getResource("/").getPath();
+        classpath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
         try {
             //防止中文路径转码
             classpath = URLDecoder.decode(classpath, "utf-8");

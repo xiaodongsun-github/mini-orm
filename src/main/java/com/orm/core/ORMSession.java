@@ -60,8 +60,7 @@ public class ORMSession {
         //打印SQL语句到控制台
         System.out.println("MiniORM-save： " + insertSQL);
         PreparedStatement statement = connection.prepareStatement(insertSQL);
-        int i = statement.executeUpdate();
-        this.close();
+        statement.executeUpdate();
     }
 
     /**
@@ -92,8 +91,7 @@ public class ORMSession {
         //打印SQL语句到控制台
         System.out.println("MiniORM-delete： " + delSQL);
         PreparedStatement statement = connection.prepareStatement(delSQL);
-        int i = statement.executeUpdate();
-        this.close();
+        statement.executeUpdate();
     }
 
     /**
@@ -147,7 +145,6 @@ public class ORMSession {
         }
         statement.close();
         resultSet.close();
-        this.close();
         return obj;
     }
 
